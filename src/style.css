@@ -1,0 +1,45 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: "Montserrat", "Vazirmatn", "sans-serif";
+  --color-primary-background: #0b1220;
+  --color-secondary-surface: #162338;
+  --color-primary-accent: #14d8c5;
+  --color-accent-hover: #0fb8aa;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-success: #22c55e;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-light-background: #f5f7fb;
+}
+
+* {
+  @apply font-montserrat leading-normal;
+}
+
+html,
+body {
+  @apply bg-primary-background;
+}
+.navigation-bar {
+  @apply text-text-primary;
+}
+
+.card-base {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.btn {
+  @apply cursor-pointer flex;
+}
+
+.status-badge.badge-completed {
+  @apply bg-success w-2 h-2 absolute top-3 right-4 rounded-full;
+}
+.status-badge.badge-upcoming {
+  @apply bg-warning w-2 h-2 absolute top-3 right-4 rounded-full;
+}
+.status-badge.badge-overdue {
+  @apply bg-danger w-2 h-2 absolute top-3 right-4 rounded-full;
+}
